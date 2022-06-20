@@ -1,5 +1,6 @@
 package de.tum.in.ase.eist;
 
+import java.util.Iterator;
 import java.util.List;
 
 public class Context {
@@ -25,16 +26,18 @@ public class Context {
 
     public boolean isChaptersSortedByName() {
 
-        for (int i = 0; i < book.size(); i++) {
-            for (int j = i + 1; j < book.size(); j++) {
-                if (book.get(i).getName().compareTo(book.get(j).getName()) > 0) {
-                    return false;
-                }
 
+        Iterator<Chapter> iter = book.iterator();
+        Chapter current, previous = iter.next();
+        while (iter.hasNext()) {
+            current = iter.next();
+            if (previous.getName().compareTo(current.getName()) > 0) {
+                return false;
             }
 
         }
         return true;
+
     }
 
     public int search(String name) {
