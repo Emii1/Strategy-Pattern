@@ -47,24 +47,6 @@ public final class Client {
 	}
 
 	/**
-	 * Generates list of {@link Chapter} objects with random List size between 5
-	 * and 15.
-	 * The list is with equal probability sorted or not.
-	 */
-	private static List<Chapter> createRandomBook() {
-		int listLength = randomIntegerWithin(BOOK_MIN_SIZE, BOOK_MAX_SIZE);
-
-		List<Chapter> book = createChapters(listLength).stream()
-				.map(chapter -> new Chapter(chapter, createRandomPageNumber())).collect(Collectors.toList());
-
-		boolean sorted = randomIntegerWithin(0, 1) == 0;
-		if (sorted) {
-			book.sort(Comparator.comparing(Chapter::getName));
-		}
-		return book;
-	}
-
-	/**
 	 * creates pseudo-random int value within a range
 	 *
 	 * @param high upper bound of the range (included)
