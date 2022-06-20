@@ -7,10 +7,6 @@ public class Context {
     private SearchStrategy searchAlgorithm;
 
 
-    public Context(List<Chapter> book) {
-        this.book = book;
-    }
-
     public SearchStrategy getSearchAlgorithm() {
         return searchAlgorithm;
     }
@@ -40,4 +36,10 @@ public class Context {
         }
         return true;
     }
+
+    public int search(String name) {
+        return searchAlgorithm.performSearch(book, name);
+    }
+
+
 }
