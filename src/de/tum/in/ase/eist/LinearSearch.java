@@ -4,8 +4,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class LinearSearch implements SearchStrategy{
-   public List<Chapter> book;
-   public String name;
+
 
 
     public  int performSearch(List<Chapter> book, String name ) {
