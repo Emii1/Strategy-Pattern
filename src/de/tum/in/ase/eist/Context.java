@@ -28,7 +28,8 @@ public class Context {
 
 
         Iterator<Chapter> iter = book.iterator();
-        Chapter current, previous = iter.next();
+        Chapter current;
+        Chapter previous = iter.next();
         while (iter.hasNext()) {
             current = iter.next();
             if (previous.getName().compareTo(current.getName()) > 0) {
