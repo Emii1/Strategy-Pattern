@@ -11,6 +11,14 @@ public class Context {
         this.book = book;
     }
 
+    public SearchStrategy getSearchAlgorithm() {
+        return searchAlgorithm;
+    }
+
+    public void setSearchAlgorithm(SearchStrategy searchAlgorithm) {
+        this.searchAlgorithm = searchAlgorithm;
+    }
+
     public List<Chapter> getBook() {
         return book;
     }
