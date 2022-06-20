@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Context {
     private List<Chapter> book;
+    private SearchStrategy searchAlgorithm;
 
 
     public Context(List<Chapter> book) {
