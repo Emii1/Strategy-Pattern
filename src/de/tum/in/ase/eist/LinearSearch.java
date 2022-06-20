@@ -3,7 +3,7 @@ package de.tum.in.ase.eist;
 import java.util.List;
 import java.util.Objects;
 
-public class LinearSearch {
+public class LinearSearch implements SearchStrategy{
    public List<Chapter> book;
    public String name;
 
