@@ -6,4 +6,12 @@ public class Policy {
     public Policy(Context context) {
         this.context = context;
     }
+
+    public void configure(){
+        if (!context.isChaptersSortedByName()){
+            LinearSearch linearSearch = new LinearSearch();
+            context.setSearchAlgorithm(linearSearch);
+        }
+    }
+
 }
